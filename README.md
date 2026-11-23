@@ -1,348 +1,246 @@
-# 📚 Library Management System Analysis Using SQL
+# 📚 Library Management System Analysis Using SQL, Python and Power BI
 
-## 📌 Project Overview
+## 📌 Project Introduction
 
-The **Library Management System Analysis Using SQL** is a Data Analytics project designed to analyze library operations and extract meaningful insights from library data.
+The **Library Management System Analysis** is a college-level Data Analytics project designed to examine library circulation, book availability, patron activity, overdue penalties, and category popularity.
 
-The project focuses on understanding book borrowing patterns, member activities, overdue books, fine collection, and popular book categories using SQL and Python.
-
-By combining MySQL, SQL, Python, Pandas, NumPy, and Power BI, this project transforms raw library data into useful information that supports better decision-making and improves library resource management.
-
-## 🎯 Project Objectives
-
-* Analyze book borrowing and returning patterns.
-* Identify the most frequently borrowed books.
-* Find the most active library members.
-* Analyze overdue books and late returns.
-* Calculate total fines collected.
-* Identify popular book categories.
-* Understand monthly and yearly borrowing trends.
-* Visualize library performance through interactive dashboards.
-* Generate meaningful insights from library data.
-
-## 🛠️ Technology Stack
-
-| Technology       | Purpose                        |
-| ---------------- | ------------------------------ |
-| MySQL            | Database management            |
-| SQL              | Data extraction and analysis   |
-| Python           | Data processing and analysis   |
-| Pandas           | Data cleaning and manipulation |
-| NumPy            | Numerical calculations         |
-| Matplotlib       | Data visualization             |
-| Seaborn          | Statistical visualization      |
-| Power BI         | Interactive dashboards         |
-| Jupyter Notebook | Python development environment |
-| Git & GitHub     | Version control                |
-
-## 🏗️ Project Workflow
-
-The project follows a structured data analytics workflow:
-
-```text
-             Library Dataset
-                    |
-                    v
-              MySQL Database
-                    |
-                    v
-               SQL Queries
-                    |
-                    v
-          Data Extraction & Analysis
-                    |
-                    v
-             Python & Pandas
-                    |
-                    v
-          Data Cleaning and EDA
-                    |
-                    v
-              Power BI
-                    |
-                    v
-         Interactive Dashboards
-                    |
-                    v
-             Business Insights
-```
-
-## 🗄️ Database Design
-
-The project uses a relational database structure to organize library information.
-
-### 1. Books Table
-
-Stores information about books available in the library.
-
-| Column           | Description            |
-| ---------------- | ---------------------- |
-| book_id          | Unique book identifier |
-| title            | Book title             |
-| author           | Author name            |
-| category         | Book category          |
-| available_copies | Available book copies  |
-
-### 2. Members Table
-
-Stores information about library members.
-
-| Column      | Description              |
-| ----------- | ------------------------ |
-| member_id   | Unique member identifier |
-| member_name | Member name              |
-| department  | Member department        |
-
-### 3. Borrowing Table
-
-Stores book issue and return information.
-
-| Column      | Description                 |
-| ----------- | --------------------------- |
-| borrow_id   | Unique borrowing identifier |
-| member_id   | Member identifier           |
-| book_id     | Book identifier             |
-| issue_date  | Book issue date             |
-| due_date    | Expected return date        |
-| return_date | Actual return date          |
-
-### 4. Fines Table
-
-Stores information about fines associated with borrowing records.
-
-| Column      | Description                 |
-| ----------- | --------------------------- |
-| fine_id     | Unique fine identifier      |
-| borrow_id   | Borrowing record identifier |
-| fine_amount | Fine amount                 |
-
-*Note: The database structure is illustrative and should be adjusted according to the actual dataset.*
-
-## 📊 SQL Analysis
-
-SQL is used to extract, filter, aggregate, and analyze library information.
-
-### Key Analysis Questions
-
-1. Which books are borrowed most frequently?
-2. Which book categories are most popular?
-3. Who are the most active library members?
-4. How many books are currently overdue?
-5. Which members return books late?
-6. What is the total fine amount collected?
-7. What are the monthly borrowing trends?
-8. Which books have the highest borrowing frequency?
-9. Which members have outstanding fines?
-10. How does borrowing activity change over time?
-
-### SQL Concepts Used
-
-* SELECT and DISTINCT
-* WHERE and ORDER BY
-* GROUP BY and HAVING
-* Aggregate Functions
-* INNER JOIN and LEFT JOIN
-* Subqueries
-* Common Table Expressions (CTEs)
-* CASE Statements
-* Date and Time Functions
-* Window Functions
-
-## 🐍 Python Data Analysis
-
-Python is used for data cleaning, processing, exploratory data analysis, and visualization.
-
-### Libraries Used
-
-| Library    | Purpose                        |
-| ---------- | ------------------------------ |
-| Pandas     | Data manipulation and cleaning |
-| NumPy      | Numerical calculations         |
-| Matplotlib | Charts and graphs              |
-| Seaborn    | Statistical data visualization |
-
-### Python Analysis Tasks
-
-* Load data from CSV files or MySQL.
-* Identify missing values.
-* Detect and handle duplicate records.
-* Convert columns into appropriate data types.
-* Clean and transform datasets.
-* Perform exploratory data analysis.
-* Calculate statistical summaries.
-* Identify trends and patterns.
-* Generate visualizations.
-
-## 📈 Power BI Dashboard
-
-Power BI is used to create interactive dashboards that present important library performance indicators.
-
-### Dashboard Components
-
-**1. Library Overview**
-
-* Total Books
-* Total Members
-* Total Borrowing Records
-* Total Fines
-
-**2. Book Analysis**
-
-* Most Borrowed Books
-* Popular Book Categories
-* Book Borrowing Distribution
-
-**3. Member Analysis**
-
-* Most Active Members
-* Member Borrowing Frequency
-* Department-wise Borrowing Trends
-
-**4. Overdue Analysis**
-
-* Total Overdue Books
-* Late Return Records
-* Outstanding Fines
-
-**5. Borrowing Trends**
-
-* Monthly Borrowing Trends
-* Yearly Borrowing Trends
-* Book Issue and Return Patterns
-
-## 📌 Expected Insights
-
-The project aims to generate the following insights:
-
-* Identify the most popular books and categories.
-* Understand member borrowing behavior.
-* Discover periods with the highest borrowing activity.
-* Identify frequently overdue books.
-* Analyze the financial impact of late returns.
-* Identify categories that may require additional book copies.
-* Improve library resource allocation.
-* Support data-driven library management decisions.
-
-## ⚙️ Installation and Setup
-
-### Prerequisites
-
-Install the following tools:
-
-* Python 3.x
-* MySQL Server
-* MySQL Workbench
-* Jupyter Notebook
-* Power BI Desktop
-* Git
-
-### Step 1: Clone the Repository
-
-```bash
-git clone https://github.com/priyanka7351/Library_Management_System.git
-```
-
-### Step 2: Navigate to the Project Directory
-
-```bash
-cd Library_Management_System
-```
-
-### Step 3: Create a Virtual Environment
-
-```bash
-python -m venv venv
-```
-
-Activate the environment on Windows:
-
-```bash
-venv\Scripts\activate
-```
-
-### Step 4: Install Required Libraries
-
-```bash
-pip install pandas numpy matplotlib seaborn sqlalchemy pymysql jupyter
-```
-
-### Step 5: Start Jupyter Notebook
-
-```bash
-jupyter notebook
-```
-
-### Step 6: Configure MySQL
-
-1. Start MySQL Server.
-2. Create the project database.
-3. Import the library dataset.
-4. Execute the SQL queries.
-5. Perform the required analysis.
-
-### Step 7: Connect Power BI
-
-1. Open Power BI Desktop.
-2. Connect to MySQL or import cleaned data.
-3. Load the required tables.
-4. Create charts and KPI cards.
-5. Build interactive dashboards.
-
-## 🚀 Project Outcomes
-
-After completing this project, the expected deliverables include:
-
-* Relational MySQL database.
-* SQL analysis queries.
-* Cleaned and processed datasets.
-* Python-based exploratory data analysis.
-* Data visualizations.
-* Interactive Power BI dashboards.
-* Library performance insights.
-* Data-driven recommendations.
-
-## 🔮 Future Enhancements
-
-* Predict future book borrowing demand using Machine Learning.
-* Identify members who may return books late.
-* Recommend books based on borrowing patterns.
-* Automate library performance reports.
-* Apply advanced statistical analysis.
-* Integrate additional library datasets.
-
-## 🤝 Contributing
-
-Contributions, suggestions, and improvements are welcome.
-
-1. Fork the repository if forking is enabled, or obtain collaborator access.
-2. Create a new branch.
-3. Make your changes.
-4. Commit your changes.
-5. Submit a Pull Request.
-
-```bash
-git checkout -b feature/your-feature-name
-
-git add .
-
-git commit -m "Add: describe your contribution"
-
-git push origin feature/your-feature-name
-```
-
-## 📚 References
-
-* [GeeksforGeeks – Library Management Data Analysis Using SQL](https://www.geeksforgeeks.org/sql/library-management-data-analysis-using-sql/)
-* [MySQL Documentation](https://dev.mysql.com/doc/)
-* [Python Documentation](https://docs.python.org/3/)
-* [Pandas Documentation](https://pandas.pydata.org/docs/)
-* [NumPy Documentation](https://numpy.org/doc/)
-* [Microsoft Power BI Documentation](https://learn.microsoft.com/power-bi/)
-
-## 📄 License
-
-This project is intended for educational and data analytics purposes. A formal open-source license can be added with the repository owner's approval.
+By integrating **MySQL**, **SQL**, **Python (Pandas, NumPy, Matplotlib)**, **Jupyter Notebook**, and **Power BI**, this project converts raw operational data into actionable insights for effective library inventory management and patron policy design.
 
 ---
 
-⭐ **If you find this project useful, consider giving the repository a star!**
+## 🎯 Project Objectives
+
+* Analyze book borrowing and return patterns over time.
+* Identify the most frequently borrowed books and popular categories.
+* Identify the most active library members.
+* Detect overdue borrowing records and track late return behavior.
+* Calculate total fine collections and outstanding unpaid amounts.
+* Provide an interactive Power BI dashboard model for library operations.
+* Keep the data pipeline simple, beginner-friendly, and easy to explain in a viva.
+
+---
+
+## 🛠️ Technology Stack
+
+| Technology | Purpose |
+| :--- | :--- |
+| **MySQL / SQL** | Relational database schema, data integrity, and analytical queries |
+| **Python 3.x** | Data processing, automated cleaning, and statistical summaries |
+| **Pandas** | Data cleaning, type conversion, merging, and transformations |
+| **NumPy** | Numeric operations and metrics calculation |
+| **Matplotlib** | Generating analytical visualizations and charts |
+| **Jupyter Notebook** | Interactive step-by-step exploratory analysis with code & visuals |
+| **Power BI** | Data modeling, interactive KPI cards, and dashboard design |
+| **Git & GitHub** | Source code version control and project documentation |
+
+---
+
+## 📁 Project Structure
+
+```text
+Library_Management_System/
+│
+├── README.md
+├── requirements.txt
+│
+├── dataset/
+│   ├── raw/
+│   │   ├── books.csv
+│   │   ├── members.csv
+│   │   ├── borrowing.csv
+│   │   └── fines.csv
+│   │
+│   └── processed/
+│       ├── books_cleaned.csv
+│       ├── members_cleaned.csv
+│       ├── borrowing_cleaned.csv
+│       └── fines_cleaned.csv
+│
+├── database/
+│   ├── create_tables.sql
+│   └── analysis_queries.sql
+│
+├── python/
+│   ├── data_cleaning.py
+│   └── data_analysis.py
+│
+├── notebooks/
+│   └── Library_Analysis.ipynb
+│
+├── powerbi/
+│   └── README.md
+│
+└── outputs/
+    └── charts/
+        ├── top_borrowed_books.png
+        ├── popular_categories.png
+        ├── monthly_borrowing_trend.png
+        ├── active_members.png
+        └── fine_analysis.png
+```
+
+---
+
+## 🗄️ Dataset Description
+
+The system consists of 4 relational tables:
+
+1. **Books (`books.csv` / `books_cleaned.csv`)** - 50 titles:
+   - `book_id`: Unique identifier (e.g., `B101`)
+   - `title`: Book title
+   - `author`: Author name
+   - `category`: Genre / subject (Fiction, Computer Science, etc.)
+   - `isbn`: Unique ISBN code
+   - `publication_year`: Year of publication
+   - `total_copies`: Total inventory count
+   - `available_copies`: Currently available copies on shelf
+   - `price`: Unit replacement cost
+
+2. **Members (`members.csv` / `members_cleaned.csv`)** - 50 patrons:
+   - `member_id`: Unique patron identifier (e.g., `M101`)
+   - `first_name`, `last_name`: Patron full name
+   - `email`, `phone`: Contact details
+   - `membership_type`: Student, Faculty, General, Premium
+   - `registration_date`: Date member joined
+   - `status`: Active, Inactive, Suspended
+
+3. **Borrowing (`borrowing.csv` / `borrowing_cleaned.csv`)** - 320 records:
+   - `borrow_id`: Unique transaction identifier (e.g., `BR1001`)
+   - `book_id`: Foreign key referencing books
+   - `member_id`: Foreign key referencing members
+   - `borrow_date`: Date book was checked out
+   - `due_date`: Expected return date
+   - `return_date`: Actual return date
+   - `status`: Transaction status (e.g., `Returned`)
+
+4. **Fines (`fines.csv` / `fines_cleaned.csv`)** - 106 records:
+   - `fine_id`: Unique fine identifier (e.g., `FN501`)
+   - `borrow_id`: Foreign key referencing borrowing
+   - `member_id`: Foreign key referencing members
+   - `fine_amount`: Dollar penalty levied
+   - `fine_date`: Date fine was assessed
+   - `payment_status`: Paid or Unpaid
+   - `payment_date`: Date penalty was settled (empty if unpaid)
+
+---
+
+## 🧹 Data Cleaning (`python/data_cleaning.py`)
+
+The cleaning pipeline performs essential preprocessing tasks using simple Pandas code:
+1. Loads all 4 raw CSV files and previews the top 5 records.
+2. Identifies and prints missing values and duplicate rows.
+3. Removes potential duplicates and strips whitespace from text columns.
+4. Standardizes all date columns into `YYYY-MM-DD` ISO format.
+5. Handles missing `payment_date` values for unpaid fines.
+6. Saves the validated cleaned tables into `dataset/processed/`.
+
+---
+
+## 📊 SQL Analysis (`database/analysis_queries.sql`)
+
+The database script contains exactly **10 beginner-friendly SQL queries** demonstrating standard SQL operations (`SELECT`, `WHERE`, `JOIN`, `GROUP BY`, `ORDER BY`, `COUNT`, `SUM`):
+
+1. **Total Books**: Counts unique book titles and total physical copies in catalog.
+2. **Total Members**: Counts registered members and active members.
+3. **Most Borrowed Books**: Identifies the top 5 most borrowed books by joining `books` and `borrowing`.
+4. **Most Active Members**: Finds the top 5 patrons with the highest number of borrowing transactions.
+5. **Popular Categories**: Calculates total borrowings grouped by book category.
+6. **Monthly Borrowing Trends**: Aggregates loans by month using `DATE_FORMAT()`.
+7. **Overdue Books**: Filters loans where `return_date > due_date`.
+8. **Total Fine Collection**: Computes total fine revenue collected versus pending unpaid fines.
+9. **Department-wise Borrowing**: Analyzes circulation across membership tiers (`membership_type`).
+10. **Books Never Borrowed**: Identifies books with zero borrowings using a `LEFT JOIN` and `IS NULL` check.
+
+---
+
+## 🐍 Python Data Analysis & Visualizations (`python/data_analysis.py`)
+
+The Python analysis script computes summary statistics and generates 5 clean charts saved to `outputs/charts/`:
+
+1. **`top_borrowed_books.png`**: Horizontal bar chart of the top 5 borrowed titles (e.g., *Dune*, *The Republic*).
+2. **`popular_categories.png`**: Bar chart of borrowing volume by category (led by Fiction and Computer Science).
+3. **`monthly_borrowing_trend.png`**: Line chart showing circulation trends from 2023 through 2025.
+4. **`active_members.png`**: Bar chart showing the top 5 most frequent patrons.
+5. **`fine_analysis.png`**: Pie chart displaying fine collection distribution (Paid: 75.1% vs Unpaid: 24.9%).
+
+---
+
+## 📓 Jupyter Notebook (`notebooks/Library_Analysis.ipynb`)
+
+A fully executed notebook divided into 9 clear sections:
+1. **Project Introduction**: Overview of the library analytics scope.
+2. **Import Libraries**: Pandas, NumPy, Matplotlib, Seaborn.
+3. **Load Datasets**: Ingesting the CSV datasets.
+4. **Data Understanding**: Inspecting shapes, column datatypes, and null values.
+5. **Data Cleaning**: String trimming, standardizing dates, handling missing values.
+6. **Exploratory Data Analysis**: Merging relational tables and computing key metrics.
+7. **Data Visualization**: Five embedded Matplotlib / Seaborn figures.
+8. **Key Findings**: Bulleted summary of insights.
+9. **Conclusion**: Operational recommendations for library management.
+
+---
+
+## 📈 Power BI Dashboard Design (`powerbi/README.md`)
+
+The project includes complete instructions and DAX formulas to build an interactive dashboard:
+* **KPI Cards**: Total Books (50), Total Members (50), Total Borrowings (320), Overdue Loans (106), Total Fines ($1,695.00).
+* **Charts**: Most Borrowed Books, Popular Categories, Monthly Borrowing Trends, Membership Type Breakdown.
+* **Slicers**: Year, Book Category, Membership Type.
+* See [powerbi/README.md](powerbi/README.md) for full DAX formulas and relationship diagram.
+
+---
+
+## 🚀 Execution Instructions
+
+### 1. Prerequisites
+Ensure Python 3.8+ and MySQL Server are installed.
+
+### 2. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Run Data Cleaning
+```bash
+python python/data_cleaning.py
+```
+*Cleaned CSV files will be generated inside `dataset/processed/`.*
+
+### 4. Run Python Analysis & Generate Charts
+```bash
+python python/data_analysis.py
+```
+*Charts will be exported to `outputs/charts/`.*
+
+### 5. Launch Jupyter Notebook
+```bash
+jupyter notebook notebooks/Library_Analysis.ipynb
+```
+
+### 6. Run MySQL Scripts
+Open MySQL Workbench or the MySQL command line client:
+```sql
+SOURCE database/create_tables.sql;
+SOURCE database/analysis_queries.sql;
+```
+
+---
+
+## 💡 Key Findings & Conclusion
+
+1. **Circulation Concentration**: Titles like *Dune* (15 loans) and *The Republic* (11 loans) experience peak circulation. Procuring additional copies will reduce hold times.
+2. **Category Demand**: Fiction (63 borrowings) and Computer Science (50 borrowings) represent the highest circulation categories.
+3. **Overdue Risk**: 106 out of 320 transactions (33.1%) were returned late, totaling $1,695.00 in fines.
+4. **Fine Recovery**: $1,273.50 (75.1%) has been collected, with $421.50 remaining outstanding.
+5. **Recommendation**: Implement automated SMS or email reminders 2 days prior to the due date to reduce late returns.
+
+---
+
+## 🎓 College Viva Questions & Answers
+
+* **Q: Why use relational tables instead of one big Excel sheet?**
+  * *A: Relational tables avoid data redundancy, maintain referential integrity with primary/foreign keys, and scale better.*
+* **Q: How are overdue books calculated?**
+  * *A: By comparing `return_date > due_date` in SQL and Pandas.*
+* **Q: Why was `LEFT JOIN` used in Query 10?**
+  * *A: A `LEFT JOIN` keeps all books even if they have no borrow records; checking `WHERE borrowing.borrow_id IS NULL` finds never-borrowed titles.*
