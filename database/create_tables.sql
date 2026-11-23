@@ -124,3 +124,4 @@ CREATE INDEX idx_fines_borrow_id ON fines(borrow_id);
 CREATE INDEX idx_fines_member_id ON fines(member_id);
 CREATE INDEX idx_fines_payment_status ON fines(payment_status);
 CREATE INDEX idx_fines_date ON fines(fine_date);
+
